@@ -1,0 +1,30 @@
+/* Шрифт подключён из пакета, а не с Google Fonts: работает без интернета и не зависит от блокировок */
+@import '@fontsource/roboto/latin-400.css';
+@import '@fontsource/roboto/latin-500.css';
+@import '@fontsource/roboto/latin-700.css';
+@import '@fontsource/roboto/cyrillic-400.css';
+@import '@fontsource/roboto/cyrillic-500.css';
+@import '@fontsource/roboto/cyrillic-700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface font-sans text-gray-900 antialiased;
+  }
+
+  /* Кнопки и ссылки в фокусе — заметная рамка для работы с клавиатуры */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  /* Нативный <dialog>: затемнение фона и отступ от краёв экрана */
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.45);
+  }
+  dialog {
+    max-width: calc(100vw - 2rem);
+  }
+}

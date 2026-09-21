@@ -1,0 +1,6 @@
+# Единые переводы строк в репозитории (LF), независимо от Windows/Linux
+* text=auto eol=lf
+*.png binary
+*.ico binary
+*.woff binary
+*.woff2 binary

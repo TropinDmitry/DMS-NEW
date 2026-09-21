@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+
+# Локальные материалы, в репозиторий не входят
+DMS-notes/
+_backup-original/

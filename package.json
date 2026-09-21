@@ -1,0 +1,19 @@
+{
+  "name": "dms",
+  "private": true,
+  "description": "DMS — система электронного документооборота (фронтенд + бэкенд)",
+  "scripts": {
+    "install:all": "npm install && npm --prefix DMS-backend install && npm --prefix DMS-frontend install",
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm --prefix DMS-backend run dev\" \"npm --prefix DMS-frontend run dev\"",
+    "seed": "npm --prefix DMS-backend run seed",
+    "test": "npm --prefix DMS-backend test",
+    "check:i18n": "node DMS-frontend/scripts/check-i18n.mjs",
+    "build": "npm --prefix DMS-frontend run build",
+    "start": "npm --prefix DMS-backend start",
+    "format": "prettier --write \"DMS-backend/{src,test}/**/*.js\" \"DMS-frontend/{src,scripts}/**/*.{js,jsx,mjs,css}\" \"DMS-frontend/*.js\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
+}
